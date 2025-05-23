@@ -11,7 +11,7 @@
 
 int main(int argc, char *argv[]) {
     int vet[TAM];
-    int seed = 5, K = 3, referencia, contador = 0;
+    int seed = 6, K = 3, referencia, contador = 0;
     int myrank, size, src, dest, mstag;
     MPI_Status status;
 
@@ -49,7 +49,7 @@ int main(int argc, char *argv[]) {
     } else if (myrank == 1) {
         src = dest = 0;
 
-        // Recebe o vetor
+       
         mstag = 0;
         MPI_Recv(vet, TAM, MPI_INT, src, mstag, MPI_COMM_WORLD, &status);
 
